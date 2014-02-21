@@ -18,6 +18,7 @@ def centroid(l):
         A += ((x*item[1])-(item[0]*y))
         C_x += ((x+item[0])*A
         C_y += ((y+item[1])*A
+        x, y = item
         
     A *= 0.5
     C_x *= 1.0/(6*A)
