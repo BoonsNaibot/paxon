@@ -1,4 +1,10 @@
-from math import cos, sin, sqrt, atan2
+from math import sqrt, atan2
+"""
+left = (1, 0)
+right = (-1, 0)
+up = (0, 1)
+down = (0, -1)
+"""
 
 def not_intersect(a, b):
      return list(set(a) ^ set(b))
