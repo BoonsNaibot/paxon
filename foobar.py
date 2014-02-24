@@ -22,7 +22,7 @@ def centroid(l):
         C_y += ((y+item[1])*A)
         x, y = item
         
-    A *= 0.5
+    A *= 0.5 #0.5 * abs(A)?
     C_x *= 1.0/(6*A)
     C_y *= 1.0/(6*A)
     return (C_x, C_y)
