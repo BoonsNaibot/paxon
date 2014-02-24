@@ -1,5 +1,8 @@
 from math import cos, sin, sqrt, atan2
 
+def not_intersect(a, b):
+     return list(set(a) ^ set(b))
+
 def transform(l, angle, first):
     #C = cos(angle)
     #S = sin(angle)
