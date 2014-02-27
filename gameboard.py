@@ -4,7 +4,7 @@ from kivy.properties import ObjectProperty, ListProperty
 
 class Widget(Widget):
 
-    def to_cartesian(self, x, y):
+    def to_cartesian(self, x, y, *args):
         window = self.get_root_window()
         x, y = self.to_window(x, y)
         return (window.center[0] - x, window.center[1] - y)
