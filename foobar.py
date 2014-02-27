@@ -1,4 +1,4 @@
-from math import sqrt, atan2
+from math import atan2#, sqrt
 """
 left = (1, 0)
 right = (-1, 0)
@@ -17,7 +17,8 @@ def transform(l, angle, first):
     return [((((first[0]-item[0])*C) - ((first[1]-item[1])*S)), (((first[0]-item[0])*S) + ((first[1]-item[1])*C))) for item in l]
 
 def to_polar(l):
-    return [(sqrt((item[0]**2)+(item[1]**2)), atan2(item[1], item[0])) for item in l]
+     return [atan2(*item[::-1]) for item in l]
+    #return [(sqrt((item[0]**2)+(item[1]**2)), atan2(*item[::-1])) for item in l]
     
 def centroid(l):
     C_x = C_y = A = x = y = 0
