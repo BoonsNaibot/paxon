@@ -7,7 +7,7 @@ class Widget(Widget):
     def to_cartesian(self, x, y):
         window = self.get_root_window()
         x, y = self.to_window(x, y)
-        return (x - window.center[0], y - window.center[1])
+        return (window.center[0] - x, window.center[1] - y)
             
 class CoinSlots(Widget):
     pass
