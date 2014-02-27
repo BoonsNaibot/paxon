@@ -1,6 +1,13 @@
 from math import copysign
 from kivy.uix.widget import Widget
 from kivy.properties import ObjectProperty, ListProperty
+
+class Widget(Widget):
+
+    def to_cartesian(self, x, y):
+        window = self.get_root_window()
+        x, y = self.to_window(x, y)
+        return (x - window.center[0], y - window.center[1])
             
 class CoinSlots(Widget):
     pass
