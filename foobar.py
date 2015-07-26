@@ -1,3 +1,19 @@
+"""
+Overall Strategy:
+0. Store references to all the monsters in a list, M.
+1. Draw a polygon, P, using up, down, left, and right.
+     a. When Gary starts moving, add the start position to list L.
+     b. Everytime direction changes, append L with that position.
+     c. When Gary arrives at another safe square, append L with that as the last position in L.
+     d. See https://upload.wikimedia.org/wikipedia/commons/4/42/Polygon_vertex_labels.svg
+2. Calculate the area and geometric center of P.
+3. Using the distance between the center of P, and the location of each monster in M, 
+calculate the areas between the monsters and the polygon (A = pi * distance^2).
+     If the area of the monster is smaller than the area of the polygon, it means
+     that the monster is caught inside the polygon.
+     Else, it means the polygon is empty and we should fill it.
+"""
+
 from math import atan2#, sqrt
 """
 left = (1, 0)
@@ -5,6 +21,12 @@ right = (-1, 0)
 up = (0, 1)
 down = (0, -1)
 """
+
+
+class HappyGary(Widget):
+     def on_move(self, x, y):
+          
+
 
 def not_intersect(a, b):
      return list(set(a) ^ set(b))
